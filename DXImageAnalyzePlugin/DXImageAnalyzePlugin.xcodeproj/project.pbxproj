@@ -1,0 +1,278 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		94165E4A17E6FC790006C2E1 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94165E4917E6FC790006C2E1 /* AppKit.framework */; };
+		94165E4C17E6FC790006C2E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94165E4B17E6FC790006C2E1 /* Foundation.framework */; };
+		94165E5217E6FC790006C2E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 94165E5017E6FC790006C2E1 /* InfoPlist.strings */; };
+		94165E5517E6FC790006C2E1 /* DXImageAnalyzePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 94165E5417E6FC790006C2E1 /* DXImageAnalyzePlugin.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		94165E4617E6FC790006C2E1 /* DXImageAnalyzePlugin.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DXImageAnalyzePlugin.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		94165E4917E6FC790006C2E1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		94165E4B17E6FC790006C2E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		94165E4F17E6FC790006C2E1 /* DXImageAnalyzePlugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DXImageAnalyzePlugin-Info.plist"; sourceTree = "<group>"; };
+		94165E5117E6FC790006C2E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		94165E5317E6FC790006C2E1 /* DXImageAnalyzePlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DXImageAnalyzePlugin.h; sourceTree = "<group>"; };
+		94165E5417E6FC790006C2E1 /* DXImageAnalyzePlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DXImageAnalyzePlugin.m; sourceTree = "<group>"; };
+		94165E5617E6FC790006C2E1 /* DXImageAnalyzePlugin-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DXImageAnalyzePlugin-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		94165E4317E6FC790006C2E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94165E4A17E6FC790006C2E1 /* AppKit.framework in Frameworks */,
+				94165E4C17E6FC790006C2E1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		94165E3D17E6FC790006C2E1 = {
+			isa = PBXGroup;
+			children = (
+				94165E4D17E6FC790006C2E1 /* DXImageAnalyzePlugin */,
+				94165E4817E6FC790006C2E1 /* Frameworks */,
+				94165E4717E6FC790006C2E1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		94165E4717E6FC790006C2E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				94165E4617E6FC790006C2E1 /* DXImageAnalyzePlugin.xcplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		94165E4817E6FC790006C2E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				94165E4917E6FC790006C2E1 /* AppKit.framework */,
+				94165E4B17E6FC790006C2E1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		94165E4D17E6FC790006C2E1 /* DXImageAnalyzePlugin */ = {
+			isa = PBXGroup;
+			children = (
+				94165E5317E6FC790006C2E1 /* DXImageAnalyzePlugin.h */,
+				94165E5417E6FC790006C2E1 /* DXImageAnalyzePlugin.m */,
+				94165E4E17E6FC790006C2E1 /* Supporting Files */,
+			);
+			path = DXImageAnalyzePlugin;
+			sourceTree = "<group>";
+		};
+		94165E4E17E6FC790006C2E1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				94165E4F17E6FC790006C2E1 /* DXImageAnalyzePlugin-Info.plist */,
+				94165E5017E6FC790006C2E1 /* InfoPlist.strings */,
+				94165E5617E6FC790006C2E1 /* DXImageAnalyzePlugin-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		94165E4517E6FC790006C2E1 /* DXImageAnalyzePlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94165E5917E6FC790006C2E1 /* Build configuration list for PBXNativeTarget "DXImageAnalyzePlugin" */;
+			buildPhases = (
+				94165E4217E6FC790006C2E1 /* Sources */,
+				94165E4317E6FC790006C2E1 /* Frameworks */,
+				94165E4417E6FC790006C2E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DXImageAnalyzePlugin;
+			productName = DXImageAnalyzePlugin;
+			productReference = 94165E4617E6FC790006C2E1 /* DXImageAnalyzePlugin.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		94165E3E17E6FC790006C2E1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = dhcdht;
+			};
+			buildConfigurationList = 94165E4117E6FC790006C2E1 /* Build configuration list for PBXProject "DXImageAnalyzePlugin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 94165E3D17E6FC790006C2E1;
+			productRefGroup = 94165E4717E6FC790006C2E1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				94165E4517E6FC790006C2E1 /* DXImageAnalyzePlugin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		94165E4417E6FC790006C2E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94165E5217E6FC790006C2E1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		94165E4217E6FC790006C2E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94165E5517E6FC790006C2E1 /* DXImageAnalyzePlugin.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		94165E5017E6FC790006C2E1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94165E5117E6FC790006C2E1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		94165E5717E6FC790006C2E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		94165E5817E6FC790006C2E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		94165E5A17E6FC790006C2E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DXImageAnalyzePlugin/DXImageAnalyzePlugin-Prefix.pch";
+				INFOPLIST_FILE = "DXImageAnalyzePlugin/DXImageAnalyzePlugin-Info.plist";
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		94165E5B17E6FC790006C2E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DXImageAnalyzePlugin/DXImageAnalyzePlugin-Prefix.pch";
+				INFOPLIST_FILE = "DXImageAnalyzePlugin/DXImageAnalyzePlugin-Info.plist";
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		94165E4117E6FC790006C2E1 /* Build configuration list for PBXProject "DXImageAnalyzePlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94165E5717E6FC790006C2E1 /* Debug */,
+				94165E5817E6FC790006C2E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94165E5917E6FC790006C2E1 /* Build configuration list for PBXNativeTarget "DXImageAnalyzePlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94165E5A17E6FC790006C2E1 /* Debug */,
+				94165E5B17E6FC790006C2E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 94165E3E17E6FC790006C2E1 /* Project object */;
+}
