@@ -11,6 +11,8 @@
 		94165E4C17E6FC790006C2E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94165E4B17E6FC790006C2E1 /* Foundation.framework */; };
 		94165E5217E6FC790006C2E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 94165E5017E6FC790006C2E1 /* InfoPlist.strings */; };
 		94165E5517E6FC790006C2E1 /* DXImageAnalyzePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 94165E5417E6FC790006C2E1 /* DXImageAnalyzePlugin.m */; };
+		94165E5F17E6FD130006C2E1 /* DXShellHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 94165E5E17E6FD130006C2E1 /* DXShellHelper.m */; };
+		94165E6217E6FD600006C2E1 /* DXPathHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 94165E6117E6FD600006C2E1 /* DXPathHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,10 @@
 		94165E5317E6FC790006C2E1 /* DXImageAnalyzePlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DXImageAnalyzePlugin.h; sourceTree = "<group>"; };
 		94165E5417E6FC790006C2E1 /* DXImageAnalyzePlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DXImageAnalyzePlugin.m; sourceTree = "<group>"; };
 		94165E5617E6FC790006C2E1 /* DXImageAnalyzePlugin-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DXImageAnalyzePlugin-Prefix.pch"; sourceTree = "<group>"; };
+		94165E5D17E6FD130006C2E1 /* DXShellHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXShellHelper.h; sourceTree = "<group>"; };
+		94165E5E17E6FD130006C2E1 /* DXShellHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXShellHelper.m; sourceTree = "<group>"; };
+		94165E6017E6FD600006C2E1 /* DXPathHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXPathHelper.h; sourceTree = "<group>"; };
+		94165E6117E6FD600006C2E1 /* DXPathHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXPathHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,7 @@
 		94165E4D17E6FC790006C2E1 /* DXImageAnalyzePlugin */ = {
 			isa = PBXGroup;
 			children = (
+				94165E5C17E6FCE30006C2E1 /* Helper */,
 				94165E5317E6FC790006C2E1 /* DXImageAnalyzePlugin.h */,
 				94165E5417E6FC790006C2E1 /* DXImageAnalyzePlugin.m */,
 				94165E4E17E6FC790006C2E1 /* Supporting Files */,
@@ -81,6 +88,17 @@
 				94165E5617E6FC790006C2E1 /* DXImageAnalyzePlugin-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		94165E5C17E6FCE30006C2E1 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				94165E5D17E6FD130006C2E1 /* DXShellHelper.h */,
+				94165E5E17E6FD130006C2E1 /* DXShellHelper.m */,
+				94165E6017E6FD600006C2E1 /* DXPathHelper.h */,
+				94165E6117E6FD600006C2E1 /* DXPathHelper.m */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +164,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				94165E5517E6FC790006C2E1 /* DXImageAnalyzePlugin.m in Sources */,
+				94165E5F17E6FD130006C2E1 /* DXShellHelper.m in Sources */,
+				94165E6217E6FD600006C2E1 /* DXPathHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
