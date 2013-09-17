@@ -51,7 +51,10 @@
         [[menuItem submenu] addItem:actionMenuItem];
         [actionMenuItem release];
         
-        
+        NSMenuItem *actionMenuItem2 = [[NSMenuItem alloc] initWithTitle:@"Check missing images" action:@selector(checkMissingImages) keyEquivalent:@""];
+        [actionMenuItem2 setTarget:self];
+        [[menuItem submenu] addItem:actionMenuItem2];
+        [actionMenuItem2 release];
     }
 }
 
@@ -72,12 +75,34 @@
                   }];
 }
 
+- (void)checkMissingImagesForWorkspaceDirectory
+{
+    NSString *checkMissingImagesScripe =
+    [NSString stringWithFormat: @"find . -name \"*.png\" | while read line;do iname=$(basename \"$line\" | sed -e \"s/\\.png//\" -e \"s/@2x//\"); dname=\"$(dirname \"$line\")/\"; [ ! -e \"${dname}${iname}.png\" ] && echo \"$line miss image\"; [ ! -e \"${dname}${iname}@2x.png\" ] && echo \"$line miss @2x image\"; done"];
+    [DXShellHelper runScript: checkMissingImagesScripe
+                   directory: [DXPathHelper currentWorkspaceDirectoryPath]
+                  completion: ^(NSTask *task, NSString *output, NSString *error) {
+                      if ([error length])
+                      {
+                          NSAlert *alert = [NSAlert alertWithMessageText:error defaultButton:nil alternateButton:nil otherButton:nil informativeTextWithFormat:@""];
+                          [alert runModal];
+                      }
+                      NSAlert *alert = [NSAlert alertWithMessageText:output defaultButton:nil alternateButton:nil otherButton:nil informativeTextWithFormat:@""];
+                      [alert runModal];
+                  }];
+}
+
 #pragma mark - Menu Action
 - (void)checkUselessImages
 {
 //    NSAlert *alert = [NSAlert alertWithMessageText:@"Hello, World" defaultButton:nil alternateButton:nil otherButton:nil informativeTextWithFormat:@""];
 //    [alert runModal];
     [self checkUselessImagesForWorkspaceDirectory];
+}
+
+- (void)checkMissingImages
+{
+    [self checkMissingImagesForWorkspaceDirectory];
 }
 
 @end
