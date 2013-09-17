@@ -55,27 +55,21 @@
     }
 }
 
-- (void)checkUselessImagesForImageDictionary:(NSString*)aDictionaryName
+- (void)checkUselessImagesForWorkspaceDirectory
 {
     NSString *checkUselessImagesScripe =
-    [NSString stringWithFormat: @"cd %@; find ./%@ -name \"*.png\" |grep -v @ | while read line;do iname=$(basename \"$line\"|sed -e \"s/\\.png//\"); [ -z \"`find ./ \\( -name \"*.m\" -or -name \"*.h\" -or -name \"*.xib\" \\) -print0 | xargs -0 grep -E \"${iname}(\\\\\\.png)?\"`\" ] && echo $line && img2x=\"`echo \"$line\"|sed -e \"s/\\.png/@2x\\.png/\"`\" && [ -e \"$img2x\" ] && echo $img2x; done", [DXPathHelper currentWorkspaceDirectoryPath], aDictionaryName];
-    [DXShellHelper runShellCommand: @"/bin/sh"
-                          withArgs: [NSArray arrayWithObjects:@"-c", checkUselessImagesScripe, nil]
-                         directory: [DXPathHelper currentWorkspaceDirectoryPath]
-                        completion: ^(NSTask *task, NSString *output, NSString *error) {
-//                            NSAlert *alert = [NSAlert alertWithMessageText: output defaultButton:nil alternateButton:nil otherButton:nil informativeTextWithFormat:@""];
-//                            [alert runModal];
-                            if ([error length])
-                            {
-                                NSAlert *alert = [NSAlert alertWithMessageText:error defaultButton:nil alternateButton:nil otherButton:nil informativeTextWithFormat:@""];
-                                [alert runModal];
-                            }
-                            NSAlert *alert = [NSAlert alertWithMessageText:output defaultButton:nil alternateButton:nil otherButton:nil informativeTextWithFormat:@""];
-                            [alert runModal];
-                        }];
-//    NSAlert *alert = [NSAlert alertWithMessageText:checkUselessImagesScripe defaultButton:nil alternateButton:nil otherButton:nil informativeTextWithFormat:@""];
-//    [alert runModal];
-
+    [NSString stringWithFormat: @"find . -name \"*.png\" |grep -v @ | while read line;do iname=$(basename \"$line\"|sed -e \"s/\\.png//\"); [ -z \"`find ./ \\( -name \"*.m\" -or -name \"*.h\" -or -name \"*.xib\" \\) -print0 | xargs -0 grep -E \"${iname}(\\\\\\.png)?\"`\" ] && echo $line && img2x=\"`echo \"$line\"|sed -e \"s/\\.png/@2x\\.png/\"`\" && [ -e \"$img2x\" ] && echo $img2x; done"];
+    [DXShellHelper runScript: checkUselessImagesScripe
+                   directory: [DXPathHelper currentWorkspaceDirectoryPath]
+                  completion: ^(NSTask *task, NSString *output, NSString *error) {
+                      if ([error length])
+                      {
+                          NSAlert *alert = [NSAlert alertWithMessageText:error defaultButton:nil alternateButton:nil otherButton:nil informativeTextWithFormat:@""];
+                          [alert runModal];
+                      }
+                      NSAlert *alert = [NSAlert alertWithMessageText:output defaultButton:nil alternateButton:nil otherButton:nil informativeTextWithFormat:@""];
+                      [alert runModal];
+                  }];
 }
 
 #pragma mark - Menu Action
@@ -83,7 +77,7 @@
 {
 //    NSAlert *alert = [NSAlert alertWithMessageText:@"Hello, World" defaultButton:nil alternateButton:nil otherButton:nil informativeTextWithFormat:@""];
 //    [alert runModal];
-    [self checkUselessImagesForImageDictionary: @"Images"];
+    [self checkUselessImagesForWorkspaceDirectory];
 }
 
 @end

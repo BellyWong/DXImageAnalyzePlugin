@@ -17,4 +17,8 @@ typedef void(^TaskCompleteBlock)(NSTask *task, NSString *output, NSString *error
               directory:(NSString *)directory
              completion:(TaskCompleteBlock)completion;
 
++ (void)runScript:(NSString*)script
+        directory:(NSString*)directory
+       completion:(TaskCompleteBlock)completion;
+
 @end

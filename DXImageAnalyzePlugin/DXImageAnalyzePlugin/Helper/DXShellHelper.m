@@ -51,4 +51,15 @@
     [task launch];
 }
 
++ (void)runScript:(NSString*)script
+        directory:(NSString*)directory
+       completion:(TaskCompleteBlock)completion
+{
+    NSString *resultScript = [NSString stringWithFormat: @"cd %@; %@", directory, script];
+    [DXShellHelper runShellCommand: @"/bin/sh"
+                          withArgs: [NSArray arrayWithObjects: @"-c", resultScript, nil]
+                         directory: directory
+                        completion: completion];
+}
+
 @end
