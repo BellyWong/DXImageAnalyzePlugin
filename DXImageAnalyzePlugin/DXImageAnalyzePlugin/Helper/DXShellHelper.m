@@ -44,8 +44,6 @@
         {
             completion(t, output, error);
         }
-        [output release];
-        [error release];
     }];
     
     [task launch];

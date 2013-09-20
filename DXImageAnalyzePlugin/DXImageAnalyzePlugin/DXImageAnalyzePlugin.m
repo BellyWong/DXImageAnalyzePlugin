@@ -35,13 +35,12 @@
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [super dealloc];
 }
 
 #pragma mark - Private
 - (void)initMenuItems
 {
-    NSMenuItem *menuItem = [[NSApp mainMenu] itemWithTitle:@"Product"];
+    NSMenuItem *menuItem = [[NSApp mainMenu] itemWithTitle:@"File"];
     if (menuItem)
     {
         [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
@@ -49,12 +48,10 @@
         NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Check useless images" action:@selector(checkUselessImages) keyEquivalent:@""];
         [actionMenuItem setTarget:self];
         [[menuItem submenu] addItem:actionMenuItem];
-        [actionMenuItem release];
         
         NSMenuItem *actionMenuItem2 = [[NSMenuItem alloc] initWithTitle:@"Check missing images" action:@selector(checkMissingImages) keyEquivalent:@""];
         [actionMenuItem2 setTarget:self];
         [[menuItem submenu] addItem:actionMenuItem2];
-        [actionMenuItem2 release];
     }
 }
 
